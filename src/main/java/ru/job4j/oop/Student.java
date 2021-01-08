@@ -5,7 +5,7 @@ public class Student {
         System.out.println("Tra tra tra");
     }
 
-    public static void song() {
+    public void song() {
         System.out.println("I believe I can fly");
     }
 
