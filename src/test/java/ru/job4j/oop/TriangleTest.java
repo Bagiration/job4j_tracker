@@ -4,9 +4,7 @@ import static org.hamcrest.Matchers.closeTo;
 import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
-
-
-import static org.junit.Assert.*;
+import ru.job4j.condition.Point;
 
 public class TriangleTest {
 
