@@ -4,6 +4,12 @@ public class Programmer extends Engineer {
     private String kind;
     private String language;
 
+    public Programmer(String name, String surname, String education, String birthday, String qualification, int experience, String kind, String language) {
+        super(name, surname, education, birthday, qualification, experience);
+        this.kind = kind;
+        this.language = language;
+    }
+
     public String getKind() {
         return kind;
     }
@@ -12,7 +18,7 @@ public class Programmer extends Engineer {
         return language;
     }
 
-    public void writeCode () {
+    public void writeCode() {
 
     }
 
