@@ -20,13 +20,9 @@ public class Library {
         System.out.println("  ");
 
         System.out.println("Перестановка местами в массиве");
-        for (int i = 0; i < bookStore.length; i++) {
-            Book temp = bookStore[i];
-            if (i == 3) {
-                bookStore[i] = bookStore[0];
-                bookStore[0] = temp;
-            }
-        }
+        Book t = bookStore[0];
+        bookStore[0] = bookStore[3];
+        bookStore[3] = t;
         for (int i = 0; i < bookStore.length; i++) {
             Book temp = bookStore[i];
             System.out.println(temp.getName() + " - " + temp.getNumber() + " страниц");
@@ -36,11 +32,9 @@ public class Library {
         System.out.println("Вывод только книг с названием Clean code ");
         for (int i = 0; i < bookStore.length; i++) {
             Book temp = bookStore[i];
-            if (temp.getName() == "Clean code") {
+            if (temp.getName().equals("Clean code")) {
                 System.out.println(temp.getName() + " - " + temp.getNumber() + " страниц");
             }
         }
     }
-
-
 }
