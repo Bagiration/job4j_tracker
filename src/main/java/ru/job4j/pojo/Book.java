@@ -2,6 +2,7 @@ package ru.job4j.pojo;
 
 public class Book {
 
+
     private String name;
     private int number;
 

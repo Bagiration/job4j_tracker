@@ -13,7 +13,6 @@ public class Library {
         bookStore[2] = book3;
         bookStore[3] = book4;
 
-
         for (int i = 0; i < bookStore.length; i++) {
             Book temp = bookStore[i];
             System.out.println(temp.getName() + " - " + temp.getNumber() + " страниц");
