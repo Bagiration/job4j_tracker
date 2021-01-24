@@ -26,20 +26,28 @@ public class Tracker {
                 dim++;
             }
         }
-        itemsWhisoutNull = Arrays.copyOf(itemsWhisoutNull, size);
-        return itemsWhisoutNull;
+        return Arrays.copyOf(itemsWhisoutNull, dim);
     }
 
-
-    public Item findById(int id) {
-        Item rsl = null;
+    private int indexOf(int id) {
+        int rsl = -1;
         for (int index = 0; index < size; index++) {
-            Item item = items[index];
-            if (item.getId() == id) {
-                rsl = item;
+            if (items[index].getId() == id) {
+                rsl = index;
                 break;
             }
         }
         return rsl;
     }
+
+    public Item findById(int id) {
+        int index = indexOf(id);
+        return index != -1 ? items[index] : null;
+    }
+
+   /* public boolean replace(int id, Item item) {
+        int index = indexOf(id);
+        int temp = -1;
+        index != -1 ? items[index] =
+    }*/
 }
